@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Hash;
 use App\Http\Requests\AuthRegistrationRequest;
+use App\Notifications\EmailVerificationNotification;
 
 class AuthAuthRegisterController extends Controller
 {
@@ -22,7 +23,7 @@ class AuthAuthRegisterController extends Controller
         $success['token'] = $user->createToken('user', ['app:all'])->plainTextToken;
         $success['name'] = $user->first_name;
         $success['success'] = true;
-
+        $user->notify(new EmailVerificationNotification());
         return response()->json($success, 200);
     }
 }

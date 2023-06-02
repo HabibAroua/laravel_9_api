@@ -20,3 +20,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('register', [App\Http\Controllers\AuthAuthRegisterController::class, 'register']);
 Route::post('login', [App\Http\Controllers\AuthLoginController::class, 'login']);
+
+Route::middleware(['auth:sanctum'])->group
+(
+    function()
+    {
+        Route::post('email-verification',[EmailVerificationController::class, 'email_verification']);
+    }
+);
