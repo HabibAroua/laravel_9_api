@@ -25,6 +25,14 @@ Route::middleware(['auth:sanctum'])->group
 (
     function()
     {
-        Route::post('email-verification',[EmailVerificationController::class, 'email_verification']);
+        Route::get
+        (
+            '/profile', function (Request $request)
+            {
+                return $request->user();
+            }
+        );
+        Route::put('profile', [App\Http\Controllers\ProfileController::class, 'update']);
+        //Route::post('email-verification',[EmailVerificationController::class, 'email_verification']);
     }
 );
