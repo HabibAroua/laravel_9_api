@@ -127,6 +127,7 @@ class ComposerStaticInit8635617c60e147097fe42ef8138b699a
         array (
             'Illuminate\\Support\\' => 19,
             'Illuminate\\' => 11,
+            'Ichtrojan\\Otp\\' => 14,
         ),
         'G' => 
         array (
@@ -423,6 +424,10 @@ class ComposerStaticInit8635617c60e147097fe42ef8138b699a
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate',
         ),
+        'Ichtrojan\\Otp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ichtrojan/laravel-otp/src',
+        ),
         'GuzzleHttp\\UriTemplate\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/uri-template/src',
@@ -521,6 +526,8 @@ class ComposerStaticInit8635617c60e147097fe42ef8138b699a
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\AuthAuthRegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthAuthRegisterController.php',
+        'App\\Http\\Controllers\\AuthLoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthLoginController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -532,7 +539,11 @@ class ComposerStaticInit8635617c60e147097fe42ef8138b699a
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Requests\\AuthLoginRequest' => __DIR__ . '/../..' . '/app/Http/Requests/AuthLoginRequest.php',
+        'App\\Http\\Requests\\AuthRegistrationRequest' => __DIR__ . '/../..' . '/app/Http/Requests/AuthRegistrationRequest.php',
+        'App\\Models\\Sanctum\\PersonalAccessToken' => __DIR__ . '/../..' . '/app/Models/Sanctum/PersonalAccessToken.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Notifications\\LoginNotification' => __DIR__ . '/../..' . '/app/Notifications/LoginNotification.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -1522,6 +1533,10 @@ class ComposerStaticInit8635617c60e147097fe42ef8138b699a
         'Hamcrest\\Type\\IsString' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Type/IsString.php',
         'Hamcrest\\Util' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
         'Hamcrest\\Xml\\HasXPath' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
+        'Ichtrojan\\Otp\\Commands\\CleanOtps' => __DIR__ . '/..' . '/ichtrojan/laravel-otp/src/Commands/CleanOtps.php',
+        'Ichtrojan\\Otp\\Models\\Otp' => __DIR__ . '/..' . '/ichtrojan/laravel-otp/src/Models/Otp.php',
+        'Ichtrojan\\Otp\\Otp' => __DIR__ . '/..' . '/ichtrojan/laravel-otp/src/Otp.php',
+        'Ichtrojan\\Otp\\OtpServiceProvider' => __DIR__ . '/..' . '/ichtrojan/laravel-otp/src/OtpServiceProvider.php',
         'Illuminate\\Auth\\Access\\AuthorizationException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/Access/AuthorizationException.php',
         'Illuminate\\Auth\\Access\\Events\\GateEvaluated' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/Access/Events/GateEvaluated.php',
         'Illuminate\\Auth\\Access\\Gate' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/Access/Gate.php',
